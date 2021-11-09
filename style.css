@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Poppins:wght@400;600;900&family=Roboto:wght@400;500;900&display=swap");
+
+:root {
+  --success-color: rgb(104, 189, 104);
+  --error-color: rgb(189, 104, 104);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: rgb(237, 242, 243);
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  width: 400px;
+}
+.form {
+  padding: 2rem 1.5rem;
+}
+h2 {
+  text-align: center;
+  margin: 0 0 1.5rem;
+}
+.form-control {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.form-control label {
+  color: #777;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 0.9rem;
+}
+.form-control:focus {
+  outline: 0;
+  border-color: #777;
+}
+.form-control.success input {
+  border-color: var(--success-color);
+}
+.form-control.error input {
+  border-color: var(--error-color);
+}
+.form-control small {
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+.form-control.error small {
+  visibility: visible;
+}
+.form button {
+  cursor: pointer;
+  background-color: rgb(98, 181, 237);
+  border: none;
+  padding: 0.8rem;
+  width: 100%;
+  font-size: 1.2rem;
+  border-radius: 2px;
+  color: white;
+}
